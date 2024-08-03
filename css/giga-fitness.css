@@ -1,3 +1,7 @@
+:root {
+  --warm-yellow: rgb(255, 187, 0);
+}
+
 .container-hero {
   position: relative;
   width: 100%;
@@ -24,12 +28,12 @@
   color: white;
 }
 
-h1,
-h2,
-h3,
-h4,
-small,
-p {
+.container-hero h1,
+.container-hero h2,
+.container-hero h3,
+.container-hero h4,
+.container-hero small,
+.container-hero p {
   color: white;
 }
 
@@ -58,7 +62,11 @@ h4 {
 }
 
 .bg-yellow {
-  background-color: rgb(255, 187, 0);
+  background-color: var(--warm-yellow);
+}
+
+.bg-white-to-yellow {
+  background: linear-gradient(to right, white 20%, var(--warm-yellow) 20%);
 }
 
 .mega {
@@ -98,40 +106,44 @@ h4 {
   }
 }
 
-.mini-mega {
+.container-hero .mini-mega {
   font-family: "Ubuntu Mono", monospace;
   font-weight: 700;
   font-style: italic;
   font-size: 2.5vw;
-  color: rgb(255, 187, 0);
+  color: var(--warm-yellow);
+}
+
+.text-yellow {
+  color: var(--warm-yellow);
 }
 
 @media (min-width: 320px) {
-  .mini-mega {
+  .container-hero .mini-mega {
     font-size: 2.75rem;
   }
 }
 
 @media (min-width: 576px) {
-  .mini-mega {
+  .container-hero .mini-mega {
     font-size: 3rem;
   }
 }
 
 @media (min-width: 768px) {
-  .mini-mega {
+  .container-hero .mini-mega {
     font-size: 3rem;
   }
 }
 
 @media (min-width: 992px) {
-  .mini-mega {
+  .container-hero .mini-mega {
     font-size: 3.75rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .mini-mega {
+  .container-hero .mini-mega {
     font-size: 4rem;
   }
 }
@@ -149,4 +161,60 @@ h4 {
 
 .image-container img {
   animation: brightness-animation 3s infinite;
+}
+
+.med-slant-trap {
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.diamond-clip {
+  clip-path: polygon(
+    20% 0,
+    80% 0%,
+    100% 20%,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0% 80%,
+    0% 20%
+  );
+}
+
+.bg-dark-stripe {
+  background: linear-gradient(
+    -30deg,
+    rgb(15, 15, 15) 40%,
+    rgb(20, 20, 20) 40%,
+    rgb(20, 20, 20) 60%,
+    rgb(15, 15, 15) 60%
+  );
+}
+
+.bg-yellow-stripe {
+  background: linear-gradient(
+    -30deg,
+    var(--warm-yellow) 40%,
+    white 40%,
+    white 60%,
+    var(--warm-yellow) 60%
+  );
+}
+
+.yellowButton {
+  background-color: var(--warm-yellow);
+  border: 1px solid #241d13;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 13px 23px;
+  text-decoration: none;
+}
+.yellowButton:hover {
+  background-color: #bda238;
+}
+.yellowButton:active {
+  position: relative;
+  top: 1px;
 }
