@@ -14,6 +14,18 @@
   justify-content: flex-start;
 }
 
+.container-hero-subscribe {
+  position: relative;
+  width: 100%;
+  background-image: url("../images/bbg-black_no_stripe.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .giga-hero {
   position: absolute;
   bottom: 0;
@@ -46,7 +58,12 @@ h1,
 h2,
 h3,
 h4 {
+  font-family: "Ubuntu Mono" !important;
+}
+
+.h1-bold {
   font-family: "Ubuntu Mono";
+  font-weight: 1000;
 }
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus {
@@ -67,6 +84,16 @@ h4 {
 
 .bg-white-to-yellow {
   background: linear-gradient(to right, white 20%, var(--warm-yellow) 20%);
+}
+
+.bg-black-yellow-stripe {
+  background: linear-gradient(
+    140deg,
+    rgb(27, 27, 27) 50%,
+    var(--warm-yellow) 50%,
+    var(--warm-yellow) 90%,
+    rgb(27, 27, 27) 90%
+  );
 }
 
 .mega {
@@ -106,44 +133,43 @@ h4 {
   }
 }
 
-.container-hero .mini-mega {
+.mini-mega {
   font-family: "Ubuntu Mono", monospace;
   font-weight: 700;
   font-style: italic;
   font-size: 2.5vw;
-  color: var(--warm-yellow);
 }
 
 .text-yellow {
-  color: var(--warm-yellow);
+  color: var(--warm-yellow) !important;
 }
 
 @media (min-width: 320px) {
-  .container-hero .mini-mega {
+  .mini-mega {
     font-size: 2.75rem;
   }
 }
 
 @media (min-width: 576px) {
-  .container-hero .mini-mega {
+  .mini-mega {
     font-size: 3rem;
   }
 }
 
 @media (min-width: 768px) {
-  .container-hero .mini-mega {
+  .mini-mega {
     font-size: 3rem;
   }
 }
 
 @media (min-width: 992px) {
-  .container-hero .mini-mega {
+  .mini-mega {
     font-size: 3.75rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .container-hero .mini-mega {
+  .mini-mega {
     font-size: 4rem;
   }
 }
@@ -167,7 +193,11 @@ h4 {
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
 }
 
-.diamond-clip {
+.gallery-inactive {
+  color: rgba(0, 0, 0, 0.29);
+}
+
+.octagon-clip {
   clip-path: polygon(
     20% 0,
     80% 0%,
@@ -217,4 +247,28 @@ h4 {
 .yellowButton:active {
   position: relative;
   top: 1px;
+}
+
+#galleryImg {
+  aspect-ratio: 1/ 1; /* Example aspect ratio */
+  object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+.subscription-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid var(--warm-yellow);
+}
+
+.subscription-card h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Ubuntu Mono";
 }
