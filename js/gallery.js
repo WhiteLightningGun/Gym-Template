@@ -1,10 +1,12 @@
 $(document).ready(function () {
   // Function to fade transition between images
   function fadeTransition(newImageSrc) {
-    $("#galleryImg").fadeOut(600, function () {
-      $(this).css("display", "none");
+    $("#galleryImg").fadeOut(500, function () {
+      $(this).css("visibility", "hidden");
       $(this).attr("src", newImageSrc);
-      $(this).fadeIn(600);
+      $(this).css("visibility", "hidden");
+      $(this).css("visibility", "visible");
+      $(this).fadeIn(500);
     });
   }
 
